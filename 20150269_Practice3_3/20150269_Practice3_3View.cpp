@@ -31,6 +31,8 @@ BEGIN_MESSAGE_MAP(CMy20150269_Practice3_3View, CView)
 	ON_WM_SIZE()
 	ON_WM_LBUTTONDOWN()
 	ON_WM_RBUTTONDOWN()
+	ON_WM_MOUSEMOVE()
+	ON_WM_LBUTTONUP()
 END_MESSAGE_MAP()
 
 // CMy20150269_Practice3_3View 생성/소멸
@@ -39,6 +41,7 @@ CMy20150269_Practice3_3View::CMy20150269_Practice3_3View()
 	: m_strOutput(_T(""))
 	, m_ptLocation(0)
 	, m_ptClientSize(0)
+	, m_bDrag(false)
 {
 	// TODO: 여기에 생성 코드를 추가합니다.
 
@@ -199,6 +202,10 @@ void CMy20150269_Practice3_3View::OnSize(UINT nType, int cx, int cy)
 void CMy20150269_Practice3_3View::OnLButtonDown(UINT nFlags, CPoint point)
 {
 	// TODO: 여기에 메시지 처리기 코드를 추가 및/또는 기본값을 호출합니다.
+	if (m_ptLocation.x > point.x - 30 && m_ptLocation.x < point.x + 30)
+		if (m_ptLocation.y > point.y - 30 && m_ptLocation.y < point.y + 30)
+			m_bDrag = true;
+
 	m_ptLocation.x = point.x;
 	m_ptLocation.y = point.y;
 	Invalidate();
@@ -224,4 +231,36 @@ void CMy20150269_Practice3_3View::OnRButtonDown(UINT nFlags, CPoint point)
 	Invalidate();
 
 	CView::OnRButtonDown(nFlags, point);
+}
+
+
+void CMy20150269_Practice3_3View::OnMouseMove(UINT nFlags, CPoint point)
+{
+	// TODO: 여기에 메시지 처리기 코드를 추가 및/또는 기본값을 호출합니다.
+	if (m_bDrag == true)
+	{
+		m_ptLocation.x = point.x;
+		m_ptLocation.y = point.y;
+	}
+
+	Invalidate();
+
+	CView::OnMouseMove(nFlags, point);
+}
+
+
+void CMy20150269_Practice3_3View::OnLButtonUp(UINT nFlags, CPoint point)
+{
+	// TODO: 여기에 메시지 처리기 코드를 추가 및/또는 기본값을 호출합니다.
+	if (m_bDrag == true)
+	{
+		m_bDrag = false;
+
+		m_ptLocation.x = point.x;
+		m_ptLocation.y = point.y;
+	}
+
+	Invalidate();
+
+	CView::OnLButtonUp(nFlags, point);
 }
