@@ -1,0 +1,10 @@
+﻿  stdafx.cpp
+  TextOutPane.cpp
+  TextOutCtrl.cpp
+  MainFrm.cpp
+  20150269_Practice5_4View.cpp
+  20150269_Practice5_4Doc.cpp
+  20150269_Practice5_4.cpp
+  코드를 생성하고 있습니다...
+20150269_Practice5_4.obj : error LNK2001: "public: void __thiscall CAboutDlg::OnSize(unsigned int,int,int)" (?OnSize@CAboutDlg@@QAEXIHH@Z) 외부 기호를 확인할 수 없습니다.
+C:\풀무 2018-2\윈도우 프로그래밍 및 실습\20150269_Practice5_4\Debug\20150269_Practice5_4.exe : fatal error LNK1120: 1개의 확인할 수 없는 외부 참조입니다.
