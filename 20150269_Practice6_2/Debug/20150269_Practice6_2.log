@@ -1,0 +1,12 @@
+﻿  stdafx.cpp
+  PenSizeDlg.cpp
+  MainFrm.cpp
+  EraserSizeDlg.cpp
+  20150269_Practice6_2View.cpp
+c:\풀무 2018-2\윈도우 프로그래밍 및 실습\20150269_practice6_2\20150269_practice6_2\20150269_practice6_2view.cpp(212): warning C4244: '인수': 'int'에서 'Gdiplus::REAL'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+c:\풀무 2018-2\윈도우 프로그래밍 및 실습\20150269_practice6_2\20150269_practice6_2\20150269_practice6_2view.cpp(220): warning C4244: '인수': 'int'에서 'Gdiplus::REAL'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+  20150269_Practice6_2Doc.cpp
+  20150269_Practice6_2.cpp
+  코드를 생성하고 있습니다...
+  20150269_Practice6_2.vcxproj -> C:\풀무 2018-2\윈도우 프로그래밍 및 실습\20150269_Practice6_2\Debug\20150269_Practice6_2.exe
+  20150269_Practice6_2.vcxproj -> C:\풀무 2018-2\윈도우 프로그래밍 및 실습\20150269_Practice6_2\Debug\20150269_Practice6_2.pdb (Partial PDB)
